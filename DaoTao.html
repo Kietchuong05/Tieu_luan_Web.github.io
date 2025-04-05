@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Đào Tạo - KHV</title>
     <link rel="stylesheet" href="CSS/Daotao.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
+      rel="stylesheet"
     />
   </head>
   <body>
@@ -23,7 +29,7 @@
         <i class="fas fa-arrow-left"></i> Quay lại
       </a>
       <div>
-        <a href="https://khv.edu.vn" class="nav-button">
+        <a href="index.html" class="nav-button">
           <i class="fas fa-home"></i> Trang chủ
         </a>
         <a
@@ -322,23 +328,73 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-      <h3>KHV</h3>
-      <p>Địa chỉ: [Địa chỉ trường]</p>
-      <p>Hotline: [Số điện thoại]</p>
-      <div class="footer-links">
-        <a href="https://facebook.com/khv" target="_blank"
-          ><i class="fab fa-facebook"></i> Facebook</a
-        >
-        <a href="https://youtube.com/khv" target="_blank"
-          ><i class="fab fa-youtube"></i> YouTube</a
-        >
-        <a href="https://khv.edu.vn/lien-he" target="_blank"
-          ><i class="fas fa-envelope"></i> Liên hệ</a
-        >
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>
+              <i class="fa-solid fa-clock" style="color: white"></i>Giờ làm việc
+            </h5>
+            <p>Thứ 2 - Thứ 6: 8:00 - 17:00</p>
+            <p>Thứ 7: 8:00 - 12:00</p>
+            <p>Chủ nhật: Nghỉ</p>
+          </div>
+          <div class="col-md-4">
+            <h5>
+              <i class="fa-solid fa-headset" style="color: white"></i>Liên hệ
+            </h5>
+            <p>Điện thoại: (028) 1234 5678</p>
+            <p>Email: info@khv.edu.vn</p>
+            <div class="mt-3">
+              <h5>
+                <i class="fa-solid fa-link" style="color: white"></i>Kết nối với
+                chúng tôi
+              </h5>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5>
+              <i class="fa-solid fa-location-dot" style="color: white"></i>Địa
+              chỉ
+            </h5>
+            <p>Số 123, đường ABC, quận XYZ, TP. Hồ Chí Minh</p>
+            <div
+              id="map"
+              style="
+                height: 200px;
+                width: 100%;
+                margin-top: 15px;
+                border-radius: 5px;
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="mt-3 q">
+          <p>&copy; 2025 Đại học KHV. Bảo lưu mọi quyền.</p>
+        </div>
       </div>
-
-      <p>&copy; 2024 KHV. Bảo lưu mọi quyền.</p>
     </footer>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw";
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [106.6997, 10.7769],
+        zoom: 13,
+      });
+
+      new mapboxgl.Marker().setLngLat([106.6997, 10.7769]).addTo(map);
+    </script>
   </body>
 </html>
