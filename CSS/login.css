@@ -1,0 +1,12 @@
+.input-error {
+  border: 2px solid red !important;
+  box-shadow: 0 0 5px red;
+  animation: shake 0.2s ease-in-out 2;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+}
