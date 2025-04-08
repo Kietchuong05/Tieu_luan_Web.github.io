@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tuyển Sinh - KHV</title>
+    <link rel="stylesheet" href="Tuyển Sinh.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1>THÔNG TIN TUYỂN SINH 2024</h1>
+      <p>KHV - Nơi khởi đầu sự nghiệp thành công</p>
+    </header>
+
+    <!-- Nút quay lại và kết nối -->
+    <div class="navigation-buttons">
+      <a href="javascript:history.back()" class="nav-button back-button">
+        <i class="fas fa-arrow-left"></i> Quay lại
+      </a>
+      <div>
+        <a href="index.html" class="nav-button">
+          <i class="fas fa-home"></i> Trang chủ
+        </a>
+        <a
+          href="dao-tao.html"
+          class="nav-button"
+          style="margin-left: 10px"
+        >
+          <i class="fas fa-book"></i> Đào tạo
+        </a>
+        <a
+          href="lien-he.html"
+          class="nav-button"
+          style="margin-left: 10px"
+        >
+          <i class="fas fa-envelope"></i> Liên hệ
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Thông báo tuyển sinh -->
+      <section class="section">
+        <div class="section-header">
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/megaphone.png"
+            alt="Thông báo"
+          />
+          <h2>Thông báo tuyển sinh</h2>
+        </div>
+        <div class="section-content">
+          <div class="announcement-grid">
+            <div class="announcement-card important">
+              <i class="fas fa-exclamation-circle"></i>
+              <div>
+                <h3>Mở đăng ký xét tuyển đợt 1</h3>
+                <p>Từ 01/03/2024 đến 30/04/2024</p>
+                <a href="#" class="announcement-link">Xem chi tiết <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="announcement-card">
+              <i class="fas fa-calendar-alt"></i>
+              <div>
+                <h3>Lịch thi đánh giá năng lực</h3>
+                <p>Ngày 15/05/2024 tại cơ sở chính</p>
+                <a href="#" class="announcement-link">Xem lịch thi <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+            
+            <div class="announcement-card">
+              <i class="fas fa-money-bill-wave"></i>
+              <div>
+                <h3>Chính sách học bổng 2024</h3>
+                <p>Cập nhật các gói học bổng mới</p>
+                <a href="#" class="announcement-link">Xem học bổng <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Các phương thức tuyển sinh -->
+      <section class="section">
+        <div class="section-header">
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/checked.png"
+            alt="Phương thức"
+          />
+          <h2>Phương thức tuyển sinh</h2>
+        </div>
+        <div class="section-content">
+          <div class="method-grid">
+            <div class="method-card">
+              <div class="method-icon">
+                <i class="fas fa-school"></i>
+              </div>
+              <h3>Xét học bạ</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Tốt nghiệp THPT</li>
+                <li><i class="fas fa-check"></i> Điểm TB năm lớp 12 ≥ 6.5</li>
+                <li><i class="fas fa-check"></i> Ưu tiên điểm học tập</li>
+              </ul>
+              <a href="#" class="method-link">Điều kiện chi tiết</a>
+            </div>
+            
+            <div class="method-card">
+              <div class="method-icon">
+                <i class="fas fa-pen-fancy"></i>
+              </div>
+              <h3>Thi đánh giá năng lực</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> Thi kiến thức tổng hợp</li>
+                <li><i class="fas fa-check"></i> Tổ chức tại trường</li>
+                <li><i class="fas fa-check"></i> 4 môn cơ bản</li>
+              </ul>
+              <a href="#" class="method-link">Cấu trúc đề thi</a>
+            </div>
+            
+            <div class="method-card">
+              <div class="method-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <h3>Xét tuyển thẳng</h3>
+              <ul>
+                <li><i class="fas fa-check"></i> HSG Quốc gia</li>
+                <li><i class="fas fa-check"></i> Điểm SAT ≥ 1200</li>
+                <li><i class="fas fa-check"></i> Ưu tiên đặc biệt</li>
+              </ul>
+              <a href="#" class="method-link">Tiêu chí xét tuyển</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Chỉ tiêu tuyển sinh -->
+      <section class="section">
+        <div class="section-header">
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/statistics.png"
+            alt="Chỉ tiêu"
+          />
+          <h2>Chỉ tiêu tuyển sinh</h2>
+        </div>
+        <div class="section-content">
+          <div class="table-responsive">
+            <table class="quota-table">
+              <thead>
+                <tr>
+                  <th>Ngành học</th>
+                  <th>Mã ngành</th>
+                  <th>Chỉ tiêu</th>
+                  <th>Tổ hợp môn</th>
+                  <th>Điểm chuẩn 2023</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Công nghệ Thông tin</td>
+                  <td>7480201</td>
+                  <td>300</td>
+                  <td>A00, A01, D01</td>
+                  <td>24.5</td>
+                </tr>
+                <tr>
+                  <td>Quản trị Kinh doanh</td>
+                  <td>7340101</td>
+                  <td>250</td>
+                  <td>A00, A01, D01, D07</td>
+                  <td>23.0</td>
+                </tr>
+                <tr>
+                  <td>Ngôn ngữ Anh</td>
+                  <td>7220201</td>
+                  <td>200</td>
+                  <td>D01, D14, D15</td>
+                  <td>22.5</td>
+                </tr>
+                <tr>
+                  <td>Kỹ thuật Điện tử</td>
+                  <td>7520207</td>
+                  <td>180</td>
+                  <td>A00, A01, D01</td>
+                  <td>21.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="note">
+            <p><i class="fas fa-info-circle"></i> Chỉ tiêu có thể thay đổi theo quyết định của Bộ GD&amp;ĐT</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Hồ sơ đăng ký -->
+      <section class="section">
+        <div class="section-header">
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/documents.png"
+            alt="Hồ sơ"
+          />
+          <h2>Hồ sơ đăng ký</h2>
+        </div>
+        <div class="section-content">
+          <div class="document-list">
+            <div class="document-item">
+              <div class="doc-number">1</div>
+              <div class="doc-content">
+                <h3>Phiếu đăng ký xét tuyển</h3>
+                <p>Tải mẫu từ website hoặc nhận tại phòng Tuyển sinh</p>
+              </div>
+            </div>
+            
+            <div class="document-item">
+              <div class="doc-number">2</div>
+              <div class="doc-content">
+                <h3>Bản sao học bạ THPT</h3>
+                <p>Công chứng hoặc xác nhận của trường</p>
+              </div>
+            </div>
+            
+            <div class="document-item">
+              <div class="doc-number">3</div>
+              <div class="doc-content">
+                <h3>Bằng tốt nghiệp/Bằng tạm thời</h3>
+                <p>Bản sao công chứng (đối với thí sinh đã tốt nghiệp)</p>
+              </div>
+            </div>
+            
+            <div class="document-item">
+              <div class="doc-number">4</div>
+              <div class="doc-content">
+                <h3>Giấy chứng nhận ưu tiên</h3>
+                <p>Nếu thuộc diện ưu tiên theo quy định</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="download-section">
+            <a href="#" class="download-btn">
+              <i class="fas fa-file-pdf"></i> Tải hướng dẫn hồ sơ (PDF)
+            </a>
+            <a href="#" class="download-btn">
+              <i class="fas fa-file-word"></i> Tải mẫu đơn đăng ký (DOCX)
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Học phí & Học bổng -->
+      <section class="section">
+        <div class="section-header">
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/scholarship.png"
+            alt="Học bổng"
+          />
+          <h2>Học phí & Học bổng</h2>
+        </div>
+        <div class="section-content">
+          <div class="tuition-grid">
+            <div class="tuition-card">
+              <h3><i class="fas fa-money-bill-wave"></i> Học phí năm 2024</h3>
+              <div class="tuition-detail">
+                <div class="tuition-item">
+                  <span>Ngành Công nghệ</span>
+                  <span>18-20 triệu/năm</span>
+                </div>
+                <div class="tuition-item">
+                  <span>Ngành Kinh tế</span>
+                  <span>15-17 triệu/năm</span>
+                </div>
+                <div class="tuition-item">
+                  <span>Ngành Xã hội</span>
+                  <span>12-14 triệu/năm</span>
+                </div>
+                <div class="tuition-item">
+                  <span>Chương trình chất lượng cao</span>
+                  <span>25-30 triệu/năm</span>
+                </div>
+              </div>
+            </div>
+            
+            <div class="scholarship-card">
+              <h3><i class="fas fa-award"></i> Chương trình học bổng</h3>
+              <div class="scholarship-list">
+                <div class="scholarship-item">
+                  <h4>Học bổng Xuất sắc</h4>
+                  <p>100% học phí - Điểm TB ≥ 8.5</p>
+                </div>
+                <div class="scholarship-item">
+                  <h4>Học bổng Tài năng</h4>
+                  <p>50% học phí - Điểm TB ≥ 8.0</p>
+                </div>
+                <div class="scholarship-item">
+                  <h4>Học bổng Khuyến khích</h4>
+                  <p>30% học phí - Điểm TB ≥ 7.5</p>
+                </div>
+              </div>
+              <a href="#" class="scholarship-link">Xem tất cả học bổng <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Câu hỏi thường gặp -->
+      <section class="section">
+        <div class="section-header">
+          <img
+            src="https://img.icons8.com/ios-filled/50/ffffff/faq.png"
+            alt="FAQ"
+          />
+          <h2>Câu hỏi thường gặp</h2>
+        </div>
+        <div class="section-content">
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Thời gian nhận hồ sơ đến khi nào?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Trường nhận hồ sơ xét tuyển theo 3 đợt trong năm:</p>
+                <ul>
+                  <li>Đợt 1: 01/03 - 30/04/2024</li>
+                  <li>Đợt 2: 01/06 - 15/07/2024</li>
+                  <li>Đợt 3: 20/08 - 10/09/2024</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Điều kiện xét học bạ như thế nào?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Điều kiện xét tuyển bằng học bạ THPT:</p>
+                <ol>
+                  <li>Tốt nghiệp THPT hoặc tương đương</li>
+                  <li>Điểm trung bình cả năm lớp 12 từ 6.5 trở lên</li>
+                  <li>Điểm các môn trong tổ hợp xét tuyển từ 7.0 trở lên</li>
+                </ol>
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Có chính sách hỗ trợ vay vốn không?</span>
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq-answer">
+                <p>Nhà trường có chính sách hỗ trợ sinh viên vay vốn ngân hàng với lãi suất ưu đãi:</p>
+                <ul>
+                  <li>Hỗ trợ thủ tục vay vốn tại Ngân hàng Chính sách Xã hội</li>
+                  <li>Lãi suất chỉ 0.5%/tháng trong thời gian học tập</li>
+                  <li>Thời gian ân hạn 12 tháng sau khi tốt nghiệp</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-contact">
+            <p>Bạn có câu hỏi khác? <a href="#">Liên hệ phòng Tuyển sinh</a> hoặc gọi hotline <strong>1800 1234</strong></p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h5>
+              <i class="fa-solid fa-clock" style="color: white"></i>Giờ làm việc
+            </h5>
+            <p>Thứ 2 - Thứ 6: 8:00 - 17:00</p>
+            <p>Thứ 7: 8:00 - 12:00</p>
+            <p>Chủ nhật: Nghỉ</p>
+          </div>
+          <div class="col-md-4">
+            <h5>
+              <i class="fa-solid fa-headset" style="color: white"></i>Liên hệ
+            </h5>
+            <p>Điện thoại: (028) 1234 5678</p>
+            <p>Email: tuyensinh@khv.edu.vn</p>
+            <div class="mt-3">
+              <h5>
+                <i class="fa-solid fa-link" style="color: white"></i>Kết nối với
+                chúng tôi
+              </h5>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a href="#" class="text-white me-2"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h5>
+              <i class="fa-solid fa-location-dot" style="color: white"></i>Địa
+              chỉ
+            </h5>
+            <p>Phòng Tuyển sinh - Số 123, đường ABC, quận XYZ, TP. Hồ Chí Minh</p>
+            <div
+              id="map"
+              style="
+                height: 200px;
+                width: 100%;
+                margin-top: 15px;
+                border-radius: 5px;
+              "
+            ></div>
+          </div>
+        </div>
+        <div class="mt-3 q">
+          <p>&copy; 2024 Đại học KHV. Bảo lưu mọi quyền.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw";
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [106.6997, 10.7769],
+        zoom: 13,
+      });
+
+      new mapboxgl.Marker().setLngLat([106.6997, 10.7769]).addTo(map);
+    </script>
+    <script src="JS/tuyen-sinh.js"></script>
+  </body>
+</html>
