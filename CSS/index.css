@@ -351,3 +351,8 @@ footer h5 {
     transform: translateX(-50%);
   }
 }
+
+
+.is-invalid {
+  border: 2px solid red !important;
+}
