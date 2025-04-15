@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const accounts = [
       { username: "sv001", password: "123456", role: "Sinh viên" },
       { username: "gv001", password: "654321", role: "Giảng viên" },
-      { username: "ql001", password: "admin@khv", role: "Quản lý" }
+      { username: "ql001", password: "admin@khv", role: "Quản lý" },
+      { username: "sv002", password: "654321", role: "Sinh viên" },
     ];
   
     form.addEventListener("submit", function (e) {
